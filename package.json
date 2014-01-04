@@ -1,11 +1,17 @@
 {
-    "author": "Marvin Roger",
-    "name": "Arti-Agencement",
-    "version": "1.0.0",
-    "dependencies": {},
-    "devDependencies": {
-        "grunt-html-validation": "~0.1.6",
-        "grunt": "~0.4.1",
-        "grunt-contrib-watch": "~0.5.3"
-    }
+  "author": "Marvin Roger",
+  "name": "Arti-Agencement",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/artiagencement/artiagencement.github.io.git"
+  },
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-imagemin": "~0.4.0",
+    "grunt-contrib-sass": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-exec": "~0.4.3"
+  }
 }

@@ -34,4 +34,4 @@ markdown: rdiscount
 permalink: pretty
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.md, package.json, Gruntfile.coffee, CNAME]
+exclude: [README.md, package.json, Gruntfile.coffee, CNAME, sass, node_modules]
