@@ -2,6 +2,10 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON("package.json")
 
+    # Concurrent tasks
+    concurrent:
+      dev: ["watch", "exec:serve"]
+
     # Deal with Jekyll
     exec:
       serve:
@@ -54,11 +58,11 @@ module.exports = (grunt) ->
 
   
   # Load NPM tasks
+  grunt.loadNpmTasks "grunt-concurrent"
   grunt.loadNpmTasks "grunt-contrib-imagemin"
   grunt.loadNpmTasks "grunt-contrib-sass"
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-exec"
   
   # Register tasks
-  grunt.registerTask "dev", ["watch"]
-  grunt.registerTask "server", ["exec:serve"]
+  grunt.registerTask "default", ["concurrent:dev"]
