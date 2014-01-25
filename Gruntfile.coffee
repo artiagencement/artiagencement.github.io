@@ -46,14 +46,13 @@ module.exports = (grunt) ->
         files: ["css/**/*.css", "_site/**/*"]
         options:
           livereload: true
-          nospawn: true
 
       sass:
         files: ["sass/**/*.scss"]
         tasks: ["sass"]
 
       jekyll:
-        files: ["**/*.html", "!**/_site/**", "_config.yml"]
+        files: ["**/*.{html,css,png,jpg,gif}", "!**/_site/**", "_config.yml"]
         tasks: ["exec:build"]
 
   

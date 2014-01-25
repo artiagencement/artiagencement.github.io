@@ -4,9 +4,36 @@
         <meta charset="utf-8">
         <title>{{ page.title }}</title>
         <meta name="description" content="{{ page.description }}">
+
+        <link rel="stylesheet" media="all" href="/css/style.css">
+        <link rel="stylesheet" media="all" href="/css/lightbox.css">
+
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/lightbox-2.6.min.js"></script>
     </head>
 
-    <body>
-        {{ content }}
+    <body id="{{ page.current }}">
+        <div id="site_wrapper">
+            <header>
+                <img src="/img/logo.png" alt="Arti Agencement" height="300">
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="/"{% if page.current == 'home' %} id="current"{% endif %}>Accueil</a></li>
+                    <li><a href="/photos-realisations"{% if page.current == 'photos-realisations' %} id="current"{% endif %}>Photos de réalisations</a></li>
+                    <li><a href="/contact"{% if page.current == 'contact' %} id="current"{% endif %}>Contact</a></li>
+                </ul>
+            </nav>
+
+            <section id="content">
+                {{ content }}
+            </section>
+
+            <footer>
+                <p>Made in Cublac</p>
+            </footer>
+        </div>
     </body>
 </html>

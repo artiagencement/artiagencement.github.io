@@ -1,0 +1,41 @@
+---
+layout: default
+title: Photos de réalisations - Arti Agencement
+description: Regardez les photos des réalisations d'Arti Agencement
+current: photos-realisations
+
+categories:
+    - name: Cuisine
+      location: cuisine
+      count: 9
+    - name: Décoration
+      location: decoration
+      count: 2
+    - name: Dressing
+      location: dressing
+      count: 6
+    - name: Mobilier
+      location: mobilier
+      count: 23
+    - name: Restauration
+      location: restauration
+      count: 9
+    - name: Structure en bois
+      location: structure_bois
+      count: 7
+
+---
+
+<!-- Photos de réalisations -->
+<section id="gallery">
+    {% for category in page.categories %}
+        <h1>{{ category.name }}</h1>
+        {% for picture_id in (1..category.count) %}
+            <div class="container">
+                <a href="/img/photos-realisations/{{ category.location }}/{{ picture_id }}.jpg" data-lightbox="{{ category.location }}" title="{{ category.name }} #{{ picture_id }}">
+                    <img src="/img/photos-realisations/{{ category.location }}/tn_{{ picture_id }}.jpg" alt="{{ category.name }} #{{ picture_id }}">
+                </a>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</section>
