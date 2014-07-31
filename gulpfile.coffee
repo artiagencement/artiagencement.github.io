@@ -6,7 +6,7 @@ stylus = require 'gulp-stylus'
 
 gulp.task 'stylus', ->
   gulp.src './assets/styl/style.styl'
-    .pipe stylus { compress: true }
+    .pipe stylus()
     .pipe csso()
     .pipe gulp.dest './css'
 

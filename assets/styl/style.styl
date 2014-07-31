@@ -64,7 +64,7 @@ nav
         text-decoration none
         font-size 20px
 
-        &hover, active
+        &:hover, &:active
           background-color #4c4c4c
 
         &#current
@@ -110,16 +110,16 @@ section#content
 
       margin-right 10px
 
-      &nth-child(3n) 
+      &:nth-child(3n) 
         margin-right 0
       
 
-      &nth-child(n+4) 
+      &:nth-child(n+4) 
         margin-top 10px
         
     
 
-    &after 
+    &:after 
       clearfix()
 
 #photos-realisations 
@@ -142,7 +142,7 @@ section#content
 
         background-color #4c4c4c
 
-        &nth-of-type(n+4) 
+        &:nth-of-type(n+4) 
           margin-top 10px
 
         img 
