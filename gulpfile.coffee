@@ -1,10 +1,11 @@
+csso = require 'gulp-csso'
 gulp = require 'gulp'
 coffee = require 'gulp-coffee'
 livereload = require 'gulp-livereload'
 stylus = require 'gulp-stylus'
 
 gulp.task 'stylus', ->
-  gulp.src './assets/styl/main.styl'
+  gulp.src './assets/styl/style.styl'
     .pipe stylus { compress: true }
     .pipe csso()
     .pipe gulp.dest './css'
