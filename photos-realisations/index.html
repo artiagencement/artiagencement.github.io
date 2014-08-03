@@ -3,39 +3,34 @@ layout: default
 title: Photos de réalisations - Arti Agencement
 description: Regardez les photos des réalisations d'Arti Agencement
 current: photos-realisations
-
-categories:
-    - name: Cuisine
-      location: cuisine
-      count: 9
-    - name: Décoration
-      location: decoration
-      count: 2
-    - name: Dressing
-      location: dressing
-      count: 6
-    - name: Mobilier
-      location: mobilier
-      count: 23
-    - name: Restauration
-      location: restauration
-      count: 9
-    - name: Structure en bois
-      location: structure_bois
-      count: 7
-
 ---
 
 <!-- Photos de réalisations -->
 <section id="gallery">
-    {% for category in page.categories %}
+    {% for category in site.data.gallery.categories %}
         <h1>{{ category.name }}</h1>
-        {% for picture_id in (1..category.count) %}
-            <div class="container">
-                <a href="/img/photos-realisations/{{ category.location }}/{{ picture_id }}.jpg" data-lightbox="{{ category.location }}" title="{{ category.name }} #{{ picture_id }}">
-                    <img src="/img/photos-realisations/{{ category.location }}/tn_{{ picture_id }}.jpg" alt="{{ category.name }} #{{ picture_id }}">
-                </a>
-            </div>
-        {% endfor %}
+        {% if category.type == 'category' %}
+          {% for collection in category.collections %}
+            {% for picture_id in (1..collection.count) %}
+                <div class="container">
+                    <a href="/img/photos-realisations/{{ category.location }}/{{ collection.index }}-{{ picture_id }}.jpg" data-lightbox="{{ category.location }}" title="{{ category.name }} {{ collection.index }} #{{ picture_id }}">
+                        <img src="/img/photos-realisations/{{ category.location }}/tn_{{ collection.index }}-{{ picture_id }}.jpg" alt="{{ category.name }} {{ collection.index }} #{{ picture_id }}">
+                    </a>
+                </div>
+            {% endfor %}
+          {% endfor %}
+        {% elsif category.type == 'subcategory' %}
+          {% for root_collection in category.collections %}
+            {% for collection in root_collection.collections %}
+              {% for picture_id in (1..collection.count) %}
+                  <div class="container">
+                      <a href="/img/photos-realisations/{{ category.location }}/{{ root_collection.location }}-{{ collection.index }}-{{ picture_id }}.jpg" data-lightbox="{{ category.location }}" title="{{ category.name }} - {{ root_collection.name }} {{ collection.index }} #{{ picture_id }}">
+                          <img src="/img/photos-realisations/{{ category.location }}/tn_{{ root_collection.location }}-{{ collection.index }}-{{ picture_id }}.jpg" alt="{{ category.name }} - {{ root_collection.name }} {{ collection.index }} #{{ picture_id }}">
+                      </a>
+                  </div>
+              {% endfor %}
+            {% endfor %}
+          {% endfor %}
+        {% endif %}
     {% endfor %}
 </section>

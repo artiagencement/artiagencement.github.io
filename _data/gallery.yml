@@ -1,0 +1,164 @@
+categories:
+  - name: Aménagement salle de bain
+    type: category
+    location: amenagement-sdb
+    collections:
+      - index: 1
+        count: 7
+      - index: 2
+        count: 23
+      - index: 3
+        count: 23
+  - name: Cuisine
+    location: cuisine
+    type: category
+    collections:
+      - index: 1
+        count: 3
+      - index: 2
+        count: 4
+      - index: 3
+        count: 3
+      - index: 4
+        count: 6
+      - index: 5
+        count: 3
+      - index: 6
+        count: 1
+      - index: 7
+        count: 9
+      - index: 8
+        count: 12
+      - index: 9
+        count: 6
+  - name: Mobilier et décoration
+    location: mobilier-deco
+    type: subcategory
+    collections:
+      - name: Armoire enfant
+        location: armoireenfant
+        collections:
+          - index: 1
+            count: 2
+      - name: Armoire merisier
+        location: armoiremerisier
+        collections:
+          - index: 1
+            count: 2
+      - name: Bureau
+        location: bureau
+        collections:
+          - index: 1
+            count: 5
+          - index: 2
+            count: 1
+          - index: 3
+            count: 1
+      - name: Coffre à jouet
+        location: coffreajouet
+        collections:
+          - index: 1
+            count: 2
+      - name: Enfilade chêne
+        location: enfiladechene
+        collections:
+          - index: 1
+            count: 1
+      - name: Lit Minnie
+        location: litminnie
+        collections:
+          - index: 1
+            count: 4
+      - name: Meuble
+        location: meuble
+        collections:
+          - index: 1
+            count: 2
+      - name: Meuble caisse à vin
+        location: meublecaisseavin
+        collections:
+          - index: 1
+            count: 9
+      - name: Meuble enfant
+        location: meubleenfant
+        collections:
+          - index: 1
+            count: 3
+      - name: Meuble frigo
+        location: meublefrigo
+        collections:
+          - index: 1
+            count: 2
+      - name: Meuble TV
+        location: meubletv
+        collections:
+          - index: 1
+            count: 3
+      - name: Mezzanine enfant
+        location: mezzanineenfant
+        collections:
+          - index: 1
+            count: 4
+      - name: Objet déco
+        location: objetdeco
+        collections:
+         - index: 1
+           count: 2
+      - name: Table basse
+        location: tablebasse
+        collections:
+          - index: 1
+            count: 2
+      - name: Tête de lit
+        location: tetedelit
+        collections:
+          - index: 1
+            count: 1
+  - name: Restauration
+    location: restauration
+    type: subcategory
+    collections:
+      - name: Chaise
+        location: chaise
+        collections:
+          - index: 1
+            count: 9
+      - name: Lit enfant
+        location: litenfant
+        collections:
+          - index: 1
+            count: 4
+  - name: Structure en bois
+    location: structure-bois
+    type: subcategory
+    collections:
+      - name: Atelier
+        location: atelier
+        collections:
+          - index: 1
+            count: 2
+      - name: Cabane
+        location: cabane
+        collections:
+          - index: 1
+            count: 1
+      - name: Châlet extérieur
+        location: chalet-exterieur
+        collections:
+          - index: 1
+            count: 1
+      - name: Isolation + bardage
+        location: isolation+bardage
+        collections:
+          - index: 1
+            count: 6
+      - name: Jardinière
+        location: jardiniere
+        collections:
+          - index: 1
+            count: 2
+      - name: Pergola + Lit bain de soleil
+        location: pergola+litbaindesoleil
+        collections:
+          - index: 1
+            count: 5
