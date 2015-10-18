@@ -6,9 +6,7 @@ categories:
       - index: 1
         count: 7
       - index: 2
-        count: 23
-      - index: 3
-        count: 23
+        count: 6
   - name: Cuisine
     location: cuisine
     type: category
