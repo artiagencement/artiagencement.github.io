@@ -69,7 +69,7 @@ categories:
         location: meuble
         collections:
           - index: 1
-            count: 2
+            count: 1
       - name: Meuble caisse à vin
         location: meublecaisseavin
         collections:
