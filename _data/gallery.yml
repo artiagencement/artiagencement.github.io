@@ -12,23 +12,21 @@ categories:
     type: category
     collections:
       - index: 1
-        count: 3
+        count: 2
       - index: 2
         count: 4
       - index: 3
-        count: 3
-      - index: 4
-        count: 6
-      - index: 5
-        count: 3
-      - index: 6
         count: 1
-      - index: 7
-        count: 9
-      - index: 8
-        count: 12
-      - index: 9
+      - index: 4
+        count: 5
+      - index: 5
+        count: 1
+      - index: 6
         count: 6
+      - index: 7
+        count: 6
+      - index: 8
+        count: 2
   - name: Mobilier et décoration
     location: mobilier-deco
     type: subcategory
