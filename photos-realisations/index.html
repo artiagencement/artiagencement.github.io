@@ -7,8 +7,9 @@ current: photos-realisations
 
 <!-- Photos de réalisations -->
 <section id="gallery">
+    <h1>Photos de réalisations</h1>
     {% for category in site.data.gallery.categories %}
-        <h1>{{ category.name }}</h1>
+        <h2>{{ category.name }}</h2>
         {% if category.type == 'category' %}
           {% for collection in category.collections %}
             {% for picture_id in (1..collection.count) %}
